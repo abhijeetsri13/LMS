@@ -2,10 +2,22 @@
 //
 
 #include <iostream>
+#include <boost/lambda/lambda.hpp>
+#include <iostream>
+#include <iterator>
+#include <algorithm>
+#include <boost/log/sources/basic_logger.hpp>
+#include <boost/log/trivial.hpp>
 
 int main()
 {
-    std::cout << "Hello LMS!\n";
+    //std::cout << "Hello LMS!\n";
+    using namespace boost::lambda;
+    typedef std::istream_iterator<int> in;
+    BOOST_LOG_TRIVIAL(info) << "This is an informational severity message";
+
+    std::for_each(
+        in(std::cin), in(), std::cout << (_1 * 3) << " ");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
