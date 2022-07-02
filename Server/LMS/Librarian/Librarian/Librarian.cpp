@@ -2,10 +2,19 @@
 //
 
 #include <iostream>
+#define LMS_DB_PATH "C:\\LMS\\Server\\LMS\\LMS_DB"
+#define LMS_DB_NAME "LMS.db"
+#include "DBManager.h"
 
 int main()
 {
+    DBManager* ptr = new DBManager();
+    ptr->Init();
     std::cout << "Hello World!\n";
+
+
+    return 0;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

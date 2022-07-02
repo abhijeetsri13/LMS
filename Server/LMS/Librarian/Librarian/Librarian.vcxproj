@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\LMS\Server\LMS\Librarian\Librarian\include\db;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,6 +129,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Librarian.cpp" />
+    <ClCompile Include="src\DBHandler\DBManager.cpp" />
+    <ClCompile Include="src\sqlite3\sqlite3.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\db\DBManager.h" />
+    <ClInclude Include="src\sqlite3\include\sqlcpp.h" />
+    <ClInclude Include="src\sqlite3\include\sqlite3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
